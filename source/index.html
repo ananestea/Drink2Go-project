@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link rel="icon" href=".//favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
+  <link rel="icon" href=".//img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href=".//img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <div class="main-header__wrapper">
+      <div class="main-header__holder">
+        <a class="main-header__logo" href="index.html">
+          <div class="main-header__logo-holder">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="38"
+                alt="Иконка логотипа Кэт энерджи.">
+            </picture>
+          </div>
+          <span class="main-header__logo-text visually-hidden">Интернет-магазин
+            кофейных напитков</span>
+        </a>
+        <div class="main-header__user user">
+          <ul class="user__list">
+            <li class="user__item">
+              <a class="user__link " href="#">
+                <span class="visually-hidden">Войти.</span>
+              </a>
+            </li>
+            <li class="user__item">
+              <a class="user__link " href="#">
+                <span class="visually-hidden">Корзина.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navigation navigation--closed navigation--nojs">
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <div class="navigation__wrapper">
+          <ul class="navigation__list">
+            <li class="navigation__item navigation__item--active">
+              <a class="navigation__link navigation__link--white" href="index.html">главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--white" href="#">каталог</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--white" href="#">доставка</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--white" href="#">о нас</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <h1 class="visually-hidden">Интернет-магазин Drink2Go</h1>
+    <section class="slider">
+      <div class="slider__container">
+        <div class="slider__wrapper">
+          <div class="slider__slide">
+            <div class="slider__image-box">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/promo-can-desktop.webp 1x, img/promo-can-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/promo-can-tablet.webp 1x, img/promo-can-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/promo-can-mobile.webp 1x, img/promo-can-mobile@2x.webp 2x">
+  
+                <source media="(min-width: 1440px)"
+                  srcset="img/promo-can-desktop.png 1x, img/promo-can-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/promo-can-tablet.png 1x, img/promo-can-tablet@2x.png 2x">
+                <img class="slider__image" src="img/promo-can-mobile.png" srcset="img/promo-can-mobile@2x.png 2x"
+                  width="280" height="270" alt="Продукт Кэт энерджи.">
+              </picture>
+            </div>
+            <p class="slider__info info">Новинка!</p>
+            <h2 class="slider__title title">Декаф Флэт Уайт</h2>
+            <p class="slider__description">Новинка!
+              Декаф Флэт Уайт
+              Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+              295₽
+              225₽
+              Заказать</p>
+          </div>
+          <div class="slider__button slider__button--prev"></div>
+          <div class="slider__button slider__button--next"></div>
+          <div class="slider__order">
+            <div class="slider__order-price">
+              <p class="slider__order-price-old"></p>
+              <p class="slider__order-price-new"></p>
+            </div>
+            <a class="slider__order-button button" href="#">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <p class="features__info info">Преимущества</p>
+      <h2 class="features__title title">Главные причины выбрать Drink2Go</h2>
+
+      <section class="features__item features__item-speed">
+        <h3 class="features__name">Скорость</h3>
+        <p class="features__description">Готовый напиток всегда под рукой — просто открой банку</p>
+        <svg class="features__icon" aria-hidden="true" focusable="false" width="24" height="12"
+          xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#arrow-options"></use>
+        </svg>
+      </section>
+
+      <section class="features__item features__item-comfort">
+        <h3 class="features__name">Удобство</h3>
+        <p class="features__description">Легко помещается и в карман,
+          и в маленькую сумочку</p>
+        <svg class="features__icon" aria-hidden="true" focusable="false" width="24" height="12"
+          xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#arrow-options"></use>
+        </svg>
+      </section>
+
+      <section class="features__item features__item-energy">
+        <h3 class="features__name">Бодрость</h3>
+        <p class="features__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        <svg class="features__icon" aria-hidden="true" focusable="false" width="24" height="12"
+          xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#arrow-options"></use>
+        </svg>
+      </section>
+
+      <section class="features__item features__item-eco">
+        <h3 class="features__name">Экологичность</h3>
+        <p class="features__description">Вся упаковка сделана
+          из перерабатываемых материалов</p>
+        <svg class="features__icon" aria-hidden="true" focusable="false" width="24" height="12"
+          xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#arrow-options"></use>
+        </svg>
+      </section>
+    </section>
+
+    <section class="catalog">
+      <p class="catalog__info info">Каталог</p>
+      <h2 class="catalog__title title">Каталог кофейных напитков</h2>
+
+      <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="post">
+
+
+        <fieldset class="form__field-group form__field-group--value">
+          <div class="form__field-group-container">
+            <legend class="form__group-title">Цена</legend>
+            <div class="form__field-wrapper">
+              <div class="form__group-wrapper">
+                <label class="form__group-price-label">
+                  <input class="form__price form__price-min" type="number" name="min-price" value="0">
+                </label>
+                <label class="form-price-label">
+                  <input class="form__price form__price-max" type="number" name="max-price" value="900">
+                </label>
+              </div>
+              <div class="form__group-range range">
+                <div class="range__bar" style="left: 0; width: 227px">
+                  <button class="range__toggle range__toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range__toggle range__toggle-max" type="button" >
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__field-group form__field-group--country">
+          <div class="form__field-group-container">
+            <legend class="form__group-title">Наличие молока</legend>
+            <div class="form__field-wrapper">
+              <div class="form__filter filter filter--country">
+                <ul class="filter__list filter__list--country">
+                  <li class="filter__item">
+                    <label class="filter__control control">
+                      <input class="visually-hidden control__input" type="radio" name="feeding-system"
+                        value="loose-weight" checked>
+                      <span class="control__mark"></span>
+                      <span class="control__label">похудение</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="filter__control control">
+                      <input class="control__input visually-hidden" type="radio" name="feeding-system"
+                        value="gain-weight">
+                      <span class="control__mark"></span>
+                      <span class="control__label">Набор массы</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="filter__control control">
+                      <input class="control__input visually-hidden" type="radio" name="feeding-system" value="advice">
+                      <span class="control__mark"></span>
+                      <span class="control__label">Не знаю (Нужен ваш совет)</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="filter__control control">
+                      <input class="control__input visually-hidden" type="radio" name="feeding-system" value="advice">
+                      <span class="control__mark"></span>
+                      <span class="control__label">Не знаю (Нужен ваш совет)</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__field-group form__field-group--milk">
+          <div class="form__field-group-container">
+            <legend class="form__group-title">Страна произрастания</legend>
+            <div class="form__filter filter filter--milk">
+              <ul class="filter__list filter__list--milk">
+                <li class="filter__item filter__item--milk">
+                  <label class="filter__control control">
+                    <input class="control__input visually-hidden" type="checkbox" name="sweetener" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">сахарозаменитель</span>
+                  </label>
+                </li>
+                <li class="filter__item filter__item--milk">
+                  <label class="filter__control control">
+                    <input class="control__input visually-hidden" type="checkbox" name="water">
+                    <span class="control__mark"></span>
+                    <span class="control__label">питьевая вода</span>
+                  </label>
+                </li>
+                <li class="filter__item filter__item--milk">
+                  <label class="filter__control control">
+                    <input class="control__input visually-hidden" type="checkbox" name="milk">
+                    <span class="control__mark"></span>
+                    <span class="control__label">молоко</span>
+                  </label>
+                </li>
+                <li class="filter__item filter__item--milk">
+                  <label class="filter__control control">
+                    <input class="control__input visually-hidden" type="checkbox" name="vitamins">
+                    <span class="control__mark"></span>
+                    <span class="control__label">витамины</span>
+                  </label>
+                </li>
+                <li class="filter__item filter__item--milk">
+                  <label class="filter__control control">
+                    <input class="control__input visually-hidden" type="checkbox" name="vitamins">
+                    <span class="control__mark"></span>
+                    <span class="control__label">витамины</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form__button-container">
+          <button class="form__submit-button button" type="submit">отправить заявку</button>
+          <p class="form__awarning">* — Обязательные поля</p>
+        </div>
+
+        
+
+
+
+
+
+
+        <fieldset class="form__field-group form__field-group--contacts">
+          <div class="form__title-wrapper form__title-wrapper--contacts">
+            <div class="form__title-holder form__title-holder--contacts">
+              <span class="form__title form__title--contacts">Контактные данные (владельца кота)</span>
+            </div>
+          </div>
+          <div class="form__holder">
+            <p class="form__field form__field--contacts">
+              <label class="form__label" for="email">E-mail:*</label>
+              <input class="form__field-input form__field-input--important form__field-input--email" type="text" id="email" name="email" placeholder="kuklachev@gmail.com"
+                required>
+              <svg class="form__field-icon" aria-hidden="true" focusable="false" width="20" height="20"
+                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#email-icon"></use>
+              </svg>
+            </p>
+            <p class="form__field form__field--contacts">
+              <label class="form__label" for="phone">Телефон:*</label>
+              <input class="form__field-input form__field-input--important form__field-input--tel" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90"
+                required>
+              <svg class="form__field-icon form__field-icon--tel" aria-hidden="true" focusable="false" width="20" height="20"
+                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#tel-icon"></use>
+              </svg>
+            </p>
+          </div>
+        </fieldset>
+        <fieldset class="form__field-group form__field-group--comments">
+          <div class="form__title-wrapper form__title-wrapper--comments">
+            <div class="form__title-holder form__title-holder--comments">
+              <span class="form__title form__title--comments">Комментарий</span>
+            </div>
+          </div>
+          <p class="form__field form__field--textarea">
+            <label class="form__label visually-hidden" for="comment">Комментарий</label>
+            <textarea class="form__field-input form__field-input--textarea" id="comment" name="comment"
+              placeholder="Расскажите обо всех повадках кота" ></textarea>
+          </p>
+        </fieldset>
+        <fieldset class="form__field-group form__field-group--extra">
+          <div class="form__title-wrapper form__title-wrapper--extra">
+            <div class="form__title-holder form__title-holder--extra">
+              <span class="form__title form__title--extra">Дополнительно</span>
+            </div>
+          </div>
+          <div class="form__filter filter filter--extra">
+            <ul class="filter__list filter__list--extra">
+              <li class="filter__item filter__item--extra">
+                <label class="filter__control control">
+                  <input class="control__input visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="filter__item filter__item--extra">
+                <label class="filter__control control">
+                  <input class="control__input visually-hidden" type="checkbox" name="water">
+                  <span class="control__mark"></span>
+                  <span class="control__label">питьевая вода</span>
+                </label>
+              </li>
+              <li class="filter__item filter__item--extra">
+                <label class="filter__control control">
+                  <input class="control__input visually-hidden" type="checkbox" name="milk">
+                  <span class="control__mark"></span>
+                  <span class="control__label">молоко</span>
+                </label>
+              </li>
+              <li class="filter__item filter__item--extra">
+                <label class="filter__control control">
+                  <input class="control__input visually-hidden" type="checkbox" name="vitamins">
+                  <span class="control__mark"></span>
+                  <span class="control__label">витамины</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <div class="form__button-container">
+          <button class="form__button button form__button-submit" type="submit">Применить</button>
+          <button class="form__button button form__button-reset" type="reset">Сбросить</button>
+        </div>
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+      <form class="catalog__filter filter" action="https://echo.htmlacademy.ru/" method="get">
+
+        <fieldset class="filter__group filter__value">
+          <legend class="filter__group-title">Цена</legend>
+          <div class="filter__group-wrapper">
+            <label class="filter__group-price-label">
+              <input class="filter-price min-price" type="number" name="min-price" value="0">
+            </label>
+            <label class="filter-price-label">
+              <input class="filter-price max-price" type="number" name="max-price" value="900">
+            </label>
+          </div>
+          <div class="filter__group-range range">
+            <div class="range__bar" style="left: 0; width: 227px">
+              <button class="range__toggle range__toggle-min" type="button">
+                <span class="visually-hidden">Изменить минимальную цену.</span>
+              </button>
+              <button class="range__toggle range__toggle-max" type="button" >
+                <span class="visually-hidden">Изменить максимальную цену.</span>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="filter__group  filter__milk">
+          <legend class="filter__group-title">Инфраструктура:</legend>
+          <ul class="filter__group-list">
+            <li class="filter__group-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Бассейн</span>
+              </label>
+            </li>
+            <li class="main-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Парковка</span>
+              </label>
+            </li>
+            <li class="main-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi">
+                <span class="control-mark"></span>
+                <span class="control-label">Wi-Fi</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="filter__group  filter-type">
+          <legend class="main-filter-title">Тип жилья:</legend>
+          <ul class="main-filter-list">
+            <li class="main-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="product-group" value="hostel"
+                  checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Гостиница</span>
+              </label>
+            </li>
+            <li class="main-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="product-group" value="motel">
+                <span class="control-mark"></span>
+                <span class="control-label">Мотель</span>
+              </label>
+            </li>
+            <li class="main-filter-item">
+              <label class="control">
+                <input class="visually-hidden control-input" type="radio" name="product-group" value="apartment">
+                <span class="control-mark"></span>
+                <span class="control-label">Апартаменты</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="filter-buttons">
+          <button class="button button-submit" type="submit">Применить</button>
+          <button class="button filter-button" type="reset">Сбросить</button>
+        </div>
+      </form>
+
+
+
+
+
+
+
+
+      <h2 class="benefits__title">Как это работает</h2>
+      <ol class="benefits__list">
+        <li class="benefits__item benefits__item--leaf">
+          <p class="benefits__description">Функциональное питание
+            содержит только полезные
+            питательные вещества.</p>
+        </li>
+        <li class="benefits__item benefits__item--powder">
+          <p class="benefits__description">Выпускается в виде порошка,
+            который нужно лишь залить
+            кипятком и готово.</p>
+        </li>
+        <li class="benefits__item benefits__item--fork">
+          <p class="benefits__description">Замените один-два приема
+            обычной еды на наше
+            функциональное питание.</p>
+        </li>
+        <li class="benefits__item benefits__item--time">
+          <p class="benefits__description">Уже через месяц наслаждайтесь изменениями к лучшему<br class="benefits-br">
+            вашего питомца!</p>
+        </li>
+      </ol>
+    </section>
+    <section class="example">
+      <div class="example__container">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+          по
+          16
+          часов в день. </p>
+        <dl class="example__profit">
+          <div class="example__wrapper">
+            <dt class="example__profit-value">5 КГ</dt>
+            <dd class="example__profit-name">снижение веса</dd>
+          </div>
+          <div class="example__wrapper">
+            <dt class="example__profit-value">60 ДНЕЙ</dt>
+            <dd class="example__profit-name">затрачено времени</dd>
+          </div>
+          <div class="example__wrapper-price">
+            <dt class="example__profit-name-diffrent">Затраты на питание:</dt>
+            <dd class="example__profit-value-diffrent">15 000 РУБ.</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="example__slider slider">
+        <div class="slider__image slider__image-before">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/slider-before-tablet.webp 1x, img/slider-before-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/slider-before-mobile.webp 1x, img/slider-before-mobile@2x.webp 2x">
+
+            <source media="(min-width: 768px)"
+              srcset="img/slider-before-tablet.png 1x, img/slider-before-tablet@2x.png 2x">
+            <img src="img/slider-before-mobile.png" srcset="img/slider-before-mobile@2x.png 2x" width="280" height="256"
+              alt="Полный котик.">
+          </picture>
+        </div>
+        <div class="slider__image slider__image-after">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/slider-after-tablet.webp 1x, img/slider-after-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/slider-after-mobile.webp 1x, img/slider-after-mobile@2x.webp 2x">
+
+            <source media="(min-width: 768px)"
+              srcset="img/slider-after-tablet.png 1x, img/slider-after-tablet@2x.png 2x">
+            <img src="img/slider-after-mobile.png" srcset="img/slider-after-mobile@2x.png 2x" width="280" height="256"
+              alt="Худой котик.">
+          </picture>
+        </div>
+        <div class="slider__range range">
+          <div class="range__bar">
+            <button class="range__toggle" type="button">
+              <svg aria-hidden="true" focusable="false" width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z" />
+              </svg>
+              <span class="visually-hidden">Изменить значение было и стало.</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="welcome">
+      <h2 class="welcome__title visually-hidden">Сотрудничество.</h2>
+      <div class="welcome__contacts contacts">
+        <h3 class="contacts__title"> приглашаем <br> к сотрудничеству дилеров!</h3>
+        <p class="contacts__address">
+          <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
+          <span class="contacts__city">Санкт-Петербург</span>
+        </p>
+      </div>
+      <div class="welcome__map">
+        <span class="visually-hidden">Как до нас добраться.</span>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1661529469543!5m2!1sru!2sru"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="welcome__map-holder">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="364" alt="Офис компании по адресу ул. Большая
+      Конюшенная, д. 19/8
+      Санкт-Петербург">
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-container">
+    <section class="about-us">
+      <h2 class="about-us__title visually-hidden">Мы в социальных сетях</h2>
+      <div class="about-us__cat-energy">
+        <a class="about-us__link" href="#">
+          <svg class="about-us__logo" aria-hidden="true" focusable="false" width="128" height="24"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#cat-icon"></use>
+          </svg>
+          <span class="visually-hidden">Интернет-магазин Кэт энерджи.</span>
+        </a>
+      </div>
+      <div class="about-us__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/htmlacademy">
+              <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
+                xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#vkontakte-icon"></use>
+              </svg>
+              <span class="visually-hidden">Вконтакте.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
+                xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#youtube-icon"></use>
+              </svg>
+              <span class="visually-hidden">Ютуб.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
+                xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#telegram-icon"></use>
+              </svg>
+              <span class="visually-hidden">Телеграм.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="about-us__academy academy">
+        <a class="academy__link academy__link--text" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="academy__title">HTML Academy</span>
+        </a>
+        <a class="academy__link academy__link--logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="academy__logo" aria-hidden="true" focusable="false" width="27" height="34"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#academy-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
