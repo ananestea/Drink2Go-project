@@ -5,15 +5,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="icon" href=".//favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
   <link rel="icon" href=".//img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href=".//img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous"> -->
 </head>
 
 <body class="page__body">
@@ -84,7 +89,7 @@
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/promo-can-tablet.webp 1x, img/promo-can-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/promo-can-mobile.webp 1x, img/promo-can-mobile@2x.webp 2x">
-  
+
                 <source media="(min-width: 1440px)"
                   srcset="img/promo-can-desktop.png 1x, img/promo-can-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/promo-can-tablet.png 1x, img/promo-can-tablet@2x.png 2x">
@@ -96,7 +101,8 @@
             <h2 class="slider__title title">Декаф Флэт Уайт</h2>
             <p class="slider__description">Новинка!
               Декаф Флэт Уайт
-              Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+              Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для
+              расслабления после тяжёлого рабочего дня
               295₽
               225₽
               Заказать</p>
@@ -177,11 +183,12 @@
                 </label>
               </div>
               <div class="form__group-range range">
-                <div class="range__bar" style="left: 0; width: 227px">
+                <div class="range__bar" style="left: 0;
+                width: 227px;">
                   <button class="range__toggle range__toggle-min" type="button">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
-                  <button class="range__toggle range__toggle-max" type="button" >
+                  <button class="range__toggle range__toggle-max" type="button">
                     <span class="visually-hidden">Изменить максимальную цену.</span>
                   </button>
                 </div>
@@ -228,7 +235,7 @@
                   </li>
                 </ul>
               </div>
-          </div>
+            </div>
         </fieldset>
 
         <fieldset class="form__field-group form__field-group--milk">
@@ -280,7 +287,7 @@
           <p class="form__awarning">* — Обязательные поля</p>
         </div>
 
-        
+
 
 
 
@@ -296,8 +303,8 @@
           <div class="form__holder">
             <p class="form__field form__field--contacts">
               <label class="form__label" for="email">E-mail:*</label>
-              <input class="form__field-input form__field-input--important form__field-input--email" type="text" id="email" name="email" placeholder="kuklachev@gmail.com"
-                required>
+              <input class="form__field-input form__field-input--important form__field-input--email" type="text"
+                id="email" name="email" placeholder="kuklachev@gmail.com" required>
               <svg class="form__field-icon" aria-hidden="true" focusable="false" width="20" height="20"
                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#email-icon"></use>
@@ -305,10 +312,10 @@
             </p>
             <p class="form__field form__field--contacts">
               <label class="form__label" for="phone">Телефон:*</label>
-              <input class="form__field-input form__field-input--important form__field-input--tel" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90"
-                required>
-              <svg class="form__field-icon form__field-icon--tel" aria-hidden="true" focusable="false" width="20" height="20"
-                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <input class="form__field-input form__field-input--important form__field-input--tel" type="text"
+                id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+              <svg class="form__field-icon form__field-icon--tel" aria-hidden="true" focusable="false" width="20"
+                height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#tel-icon"></use>
               </svg>
             </p>
@@ -323,7 +330,7 @@
           <p class="form__field form__field--textarea">
             <label class="form__label visually-hidden" for="comment">Комментарий</label>
             <textarea class="form__field-input form__field-input--textarea" id="comment" name="comment"
-              placeholder="Расскажите обо всех повадках кота" ></textarea>
+              placeholder="Расскажите обо всех повадках кота"></textarea>
           </p>
         </fieldset>
         <fieldset class="form__field-group form__field-group--extra">
@@ -395,11 +402,12 @@
             </label>
           </div>
           <div class="filter__group-range range">
-            <div class="range__bar" style="left: 0; width: 227px">
+            <div class="range__bar" style="left: 0;
+            width: 227px;">
               <button class="range__toggle range__toggle-min" type="button">
                 <span class="visually-hidden">Изменить минимальную цену.</span>
               </button>
-              <button class="range__toggle range__toggle-max" type="button" >
+              <button class="range__toggle range__toggle-max" type="button">
                 <span class="visually-hidden">Изменить максимальную цену.</span>
               </button>
             </div>
@@ -438,8 +446,7 @@
           <ul class="main-filter-list">
             <li class="main-filter-item">
               <label class="control">
-                <input class="visually-hidden control-input" type="radio" name="product-group" value="hostel"
-                  checked>
+                <input class="visually-hidden control-input" type="radio" name="product-group" value="hostel" checked>
                 <span class="control-mark"></span>
                 <span class="control-label">Гостиница</span>
               </label>

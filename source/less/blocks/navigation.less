@@ -1,0 +1,117 @@
+@media (max-width: @mobile-width-only) {
+  .navigation--opened .navigation {
+    min-height: 198px;
+  }
+
+  .navigation--opened .navigation__wrapper {
+    position: absolute;
+    z-index: 10;
+    min-height: 198px;
+    width: 100%;
+    background-color: rgb(142, 19, 19);
+  }
+
+  .navigation--closed .navigation__item {
+    display: none;
+  }
+
+  .navigation--nojs .navigation__toggle {
+    display: none;
+  }
+
+  .navigation--nojs .navigation__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .navigation--nojs .navigation__item {
+    display: block;
+  }
+}
+
+.navigation--closed .navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: rgb(144, 19, 19);
+  box-shadow: 0 7px 0 0 rgb(144, 19, 19), 0 14px 0 0 rgb(144, 19, 19);
+}
+
+.navigation--closed .navigation__toggle:active::before {
+  background-color: fade(rgb(109, 12, 12), 30%);
+  box-shadow:
+    0 7px 0 0 fade(rgb(109, 12, 12), 30%),
+    0 14px 0 0 fade(rgb(109, 12, 12), 30%);
+}
+
+.navigation--opened .navigation__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: rgb(208, 145, 145);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(rgb(2, 0, 0), 30%);
+  }
+}
+
+.navigation__toggle {
+  background-color: rgb(107, 46, 46);
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 16px;
+  position: absolute;
+  top: 24px;
+  right: 20px;
+}
+
+// .navigation__list {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .navigation__item {
+//   text-transform: uppercase;
+//   // font-family: @font-family-main;
+//   font-weight: 500;
+//   font-size: 20px;
+//   line-height: 20px;
+//   border-top: 1px solid #e6e6e6;
+//   text-align: center;
+// }
+
+// .navigation__link {
+//   display: block;
+//   // color: @black;
+//   text-decoration: none;
+//   padding: 22px 20px 23px;
+
+//   &:hover,
+//   &:focus {
+//     opacity: 0.6;
+//   }
+
+//   &:active {
+//     opacity: 0.3;
+//   }
+// }

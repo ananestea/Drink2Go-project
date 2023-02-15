@@ -1,1 +1,75 @@
-/* здесь используйте глобальные переменные */
+// screen
+@mobile-width: 320px;
+@tablet-width: 768px;
+@mobile-width-only: 767px;
+@desktop-width: 1440px;
+
+// font
+@font-family-main: "Montserrat", sans-serif;
+@font-size-main: 14px;
+@line-height-main: 20px;
+@font-color-main: @black;
+
+// main-colors
+@black: #333333;
+@white: #ffffff;
+@grey: #bdbdbd;
+@primary: #7859cf;
+@secondary: #f0ebff;
+
+// background-colors
+@bg-light: #f8f8f8;
+@bg-bege: #f3ebe1;
+@bg-lavander: #eae6fc;
+@bg-espresso: #e5e6e8;
+
+// alt-colors
+@primary-opacity: rgba(120, 89, 207, 0.25);
+@primary-lighter: #9070ec;
+@primary-darker: #593cac;
+@grey-light: #e2e2e2;
+
+// mixin
+.tablet-title-style () {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 80px;
+}
+.mobile-title-style () {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.tablet-h2title-style () {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 64px;
+}
+.mobile-h2title-style () {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.tablet-h3title-style () {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+.mobile-h3title-style () {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.tablet-text-style () {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+.mobile-text-style () {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
