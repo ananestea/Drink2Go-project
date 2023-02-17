@@ -1,0 +1,79 @@
+.features {
+  padding: 50px 20px 60px;
+  text-align: center;
+}
+
+.features__info {
+  color: @primary;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+.features__title {
+  .mobile-h2title-style ();
+  margin-bottom: 36px;
+}
+
+.features__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features__item {
+  min-height: 142px;
+  margin-bottom: 20px;
+  padding-top: 66px;
+  box-sizing: border-box
+}
+
+.features__name {
+  .mobile-h3title-style ();
+  padding: 0;
+  margin-bottom: 4px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    left: 115px;
+    width: 50px;
+    height: 56px;
+    display: block;
+  }
+
+  &--speed {
+    &::before {
+      background-image: url("../img/features-clock-icon.svg");
+      background-size: 50px 56px;
+    }
+  }
+  &--comfort {
+    &::before {
+      background-image: url("../img/features-pocket-icon.svg");
+      background-size: 50px 56px;
+    }
+  }
+  &--energy {
+    &::before {
+      background-image: url("../img/features-lightning-icon.svg");
+      background-size: 50px 56px;
+    }
+  }
+  &--eco {
+    &::before {
+      background-image: url("../img/features-leaf-icon.svg");
+      background-size: 50px 56px;
+    }
+  }
+}
+
+.features__description{
+  margin: 0;
+  padding: 0;
+}

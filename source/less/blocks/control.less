@@ -1,0 +1,149 @@
+.control {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+
+  &:hover {
+    .control__mark {
+      border-color: #bababa;
+    }
+  }
+
+  &:focus-within {
+    .control__mark {
+      outline: 1px solid @grey;
+      border: 1px solid @grey;
+    }
+  }
+}
+
+.control__input {
+  &:disabled ~ span {
+    color: @grey-light;
+  }
+}
+
+.control__mark {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: @white;
+  border: 2px solid @grey;
+  box-sizing: border-box;
+}
+
+.control__input[type="radio"] + .control__mark {
+  border-radius: 50%;
+}
+
+.control__input[type="checkbox"] + .control__mark {
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  border: none;
+  background-color: @grey;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: @white;
+  }
+}
+
+.control__input[type="checkbox"] {
+  &:checked + .control__mark {
+    background-color: @primary;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 20px;
+
+    }
+  }
+}
+
+.control__input[type="radio"] {
+  &:checked + .control__mark {
+    border: 2px solid @primary;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: auto;
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: @primary;
+    }
+  }
+}
+
+.control__label {
+  display: block;
+  padding-top: 6px;
+  line-height: 24px;
+}
+
+// @media (min-width: @tablet-width) {
+//   .control {
+//     padding-left: 60px;
+//   }
+
+//   .control__label {
+//     padding-top: 5px;
+//     padding-bottom: 5px;
+//     font-size: 20px;
+//     line-height: 30px;
+//   }
+
+//   .control__mark {
+//     width: 40px;
+//     height: 40px;
+//   }
+
+//   .control__input[type="checkbox"] {
+//     &:checked + .control__mark {
+//       &::after {
+//         content: "";
+//         position: absolute;
+//         top: 5px;
+//         left: 7px;
+//         margin: auto;
+//         display: block;
+//         width: 23px;
+//         height: 14px;
+//         border: 2px solid @green-main;
+//         border-top-style: none;
+//         border-right-style: none;
+//         transform: rotate(-45deg);
+//       }
+//     }
+//   }
+
+//   .control__input[type="radio"] {
+//     &:checked + .control__mark {
+//       &::after {
+//         content: "";
+//         position: absolute;
+//         top: 10px;
+//         left: 10px;
+//         margin: auto;
+//         display: block;
+//         width: 18px;
+//         height: 18px;
+//         border-radius: 50%;
+//         background-color: @green-main;
+//       }
+//     }
+//   }
+// }
