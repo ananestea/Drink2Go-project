@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -21,8 +22,8 @@
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <div class="main-header__holder">
-        <a class="main-header__logo" href="index.html">
+      <a class="main-header__logo" href="index.html">
+        <div class="main-header__logo-wrapper">
           <div class="main-header__logo-holder">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
@@ -33,27 +34,27 @@
           </div>
           <span class="main-header__logo-text">Интернет-магазин
             кофейных напитков</span>
-        </a>
-        <div class="main-header__user user">
-          <ul class="user__list">
-            <li class="user__item">
-              <a class="user__link " href="#">
-                <svg class ="user__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 4C10.6667 5.47276 9.47276 6.66667 8 6.66667C6.52724 6.66667 5.33333 5.47276 5.33333 4C5.33333 2.52724 6.52724 1.33333 8 1.33333C9.47276 1.33333 10.6667 2.52724 10.6667 4ZM12 4C12 6.20914 10.2091 8 8 8C5.79086 8 4 6.20914 4 4C4 1.79086 5.79086 0 8 0C10.2091 0 12 1.79086 12 4ZM3.19673 12.3102C4.43611 11.2774 6.1613 10.6667 8 10.6667C9.8387 10.6667 11.5639 11.2774 12.8033 12.3102C14.0354 13.337 14.6667 14.6719 14.6667 16H16C16 14.2321 15.1573 12.5363 13.6569 11.286C12.1566 10.0357 10.1218 9.33333 8 9.33333C5.87821 9.33333 3.8434 10.0357 2.34315 11.286C0.842686 12.5363 0 14.2321 0 16L1.33333 16C1.33333 14.6719 1.96465 13.337 3.19673 12.3102Z" fill="#333333"/>
-                </svg>
-                <span class="visually-hidden">Войти.</span>
-              </a>
-            </li>
-            <li class="user__item">
-              <a class="user__link " href="#">
-                <svg class ="user__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z" fill="#333333"/>
-                </svg>
-                <span class="visually-hidden">Корзина.</span>
-              </a>
-            </li>
-          </ul>
         </div>
+      </a>
+      <div class="main-header__user user">
+        <ul class="user__list">
+          <li class="user__item">
+            <a class="user__link " href="#">
+              <svg class ="user__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 4C10.6667 5.47276 9.47276 6.66667 8 6.66667C6.52724 6.66667 5.33333 5.47276 5.33333 4C5.33333 2.52724 6.52724 1.33333 8 1.33333C9.47276 1.33333 10.6667 2.52724 10.6667 4ZM12 4C12 6.20914 10.2091 8 8 8C5.79086 8 4 6.20914 4 4C4 1.79086 5.79086 0 8 0C10.2091 0 12 1.79086 12 4ZM3.19673 12.3102C4.43611 11.2774 6.1613 10.6667 8 10.6667C9.8387 10.6667 11.5639 11.2774 12.8033 12.3102C14.0354 13.337 14.6667 14.6719 14.6667 16H16C16 14.2321 15.1573 12.5363 13.6569 11.286C12.1566 10.0357 10.1218 9.33333 8 9.33333C5.87821 9.33333 3.8434 10.0357 2.34315 11.286C0.842686 12.5363 0 14.2321 0 16L1.33333 16C1.33333 14.6719 1.96465 13.337 3.19673 12.3102Z" fill="#333333"/>
+              </svg>
+              <span class="user__text">Войти</span>
+            </a>
+          </li>
+          <li class="user__item">
+            <a class="user__link " href="#">
+              <svg class ="user__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z" fill="#333333"/>
+              </svg>
+              <span class="user__text">Корзина</span>
+            </a>
+          </li>
+        </ul>
       </div>
       <nav class="navigation navigation--closed navigation--nojs">
         <button class="navigation__toggle" type="button">
@@ -62,16 +63,16 @@
         <div class="navigation__wrapper">
           <ul class="navigation__list">
             <li class="navigation__item navigation__item--active">
-              <a class="navigation__link navigation__link--white" href="index.html">главная</a>
+              <a class="navigation__link navigation__link" href="index.html">главная</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--white" href="#">каталог</a>
+              <a class="navigation__link navigation__link" href="#">каталог</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--white" href="#">доставка</a>
+              <a class="navigation__link navigation__link" href="#">доставка</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--white" href="#">о нас</a>
+              <a class="navigation__link navigation__link" href="#">о нас</a>
             </li>
           </ul>
         </div>
@@ -83,7 +84,6 @@
     <h1 class="visually-hidden">Интернет-магазин Drink2Go</h1>
     <section class="swiper">
       <div class="swiper-wrapper">
-        <!-- Slides -->
         <div class="swiper-slide swiper-slide--white">
           <div class="swiper__image-box">
             <picture>
@@ -206,8 +206,8 @@
       <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form__field-group-wrapper">
           <fieldset class="form__field-group form__field-group--value">
+            <legend class="form__group-title">Цена</legend>
             <div class="form__field-group-container">
-              <legend class="form__group-title">Цена</legend>
               <div class="form__field-wrapper">
                 <div class="form__price price">
                   <div class="price__range range">
@@ -233,8 +233,8 @@
             </div>
           </fieldset>
           <fieldset class="form__field-group form__field-group--milk">
+            <legend class="form__group-title">Наличие молока</legend>
             <div class="form__field-group-container">
-              <legend class="form__group-title">Наличие молока</legend>
               <div class="form__field-wrapper">
                 <div class="form__filter filter filter--milk">
                   <ul class="filter__list filter__list--milk">
@@ -263,7 +263,7 @@
                     </li>
                     <li class="filter__item">
                       <label class="filter__control control">
-                        <input class="control__input visually-hidden" type="radio" name="milk-inclision" value="no-milke">
+                        <input class="control__input visually-hidden" type="radio" name="milk-inclision" value="no-milk" disabled>
                         <span class="control__mark"></span>
                         <span class="control__label">Без молока</span>
                       </label>
@@ -271,43 +271,44 @@
                   </ul>
                 </div>
               </div>
+            </div>
           </fieldset>
           <fieldset class="form__field-group form__field-group--country">
+            <legend class="form__group-title">Страна произрастания</legend>
             <div class="form__field-group-container">
-              <legend class="form__group-title">Страна произрастания</legend>
               <div class="form__filter filter filter--country">
                 <ul class="filter__list filter__list--country">
                   <li class="filter__item filter__item--country">
-                    <label class="filter__control control">
+                    <label class="filter__control control control--country">
                       <input class="control__input visually-hidden" type="checkbox" name="brazil" checked>
                       <span class="control__mark"></span>
                       <span class="control__label">Бразилия</span>
                     </label>
                   </li>
                   <li class="filter__item filter__item--country">
-                    <label class="filter__control control">
+                    <label class="filter__control control control--country">
                       <input class="control__input visually-hidden" type="checkbox" name="ethiopia">
                       <span class="control__mark"></span>
                       <span class="control__label">Эфиопия</span>
                     </label>
                   </li>
                   <li class="filter__item filter__item--country">
-                    <label class="filter__control control">
+                    <label class="filter__control control control--country">
                       <input class="control__input visually-hidden" type="checkbox" name="columbia">
                       <span class="control__mark"></span>
                       <span class="control__label">Колумбия</span>
                     </label>
                   </li>
                   <li class="filter__item filter__item--country">
-                    <label class="filter__control control">
+                    <label class="filter__control control control--country">
                       <input class="control__input visually-hidden" type="checkbox" name="costa-rica">
                       <span class="control__mark"></span>
                       <span class="control__label">Коста-Рика</span>
                     </label>
                   </li>
                   <li class="filter__item filter__item--country">
-                    <label class="filter__control control">
-                      <input class="control__input visually-hidden" type="checkbox" name="peru">
+                    <label class="filter__control control control--country">
+                      <input class="control__input visually-hidden" type="checkbox" name="peru"  disabled>
                       <span class="control__mark"></span>
                       <span class="control__label">Перу</span>
                     </label>
@@ -543,98 +544,147 @@
               <a class="pagination__link button pagination__button pagination__button--next"  href="#">
                 <span class="visually-hidden">Вперёд</span></a>
             </li>
-        </div>
-      </div>
-
-    <section class="welcome">
-      <h2 class="welcome__title visually-hidden">Сотрудничество.</h2>
-      <div class="welcome__contacts contacts">
-        <h3 class="contacts__title"> приглашаем <br> к сотрудничеству дилеров!</h3>
-        <p class="contacts__address">
-          <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
-          <span class="contacts__city">Санкт-Петербург</span>
-        </p>
-      </div>
-      <div class="welcome__map">
-        <span class="visually-hidden">Как до нас добраться.</span>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1661529469543!5m2!1sru!2sru"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="welcome__map-holder">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
-            <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="364" alt="Офис компании по адресу ул. Большая
-      Конюшенная, д. 19/8
-      Санкт-Петербург">
-          </picture>
+          </ul>
         </div>
       </div>
     </section>
+      <section class="map">
+        <h2 class="map__title visually-hidden">Как до нас добраться.</h2>
+        <div class = "map__leafet" id="map" style="width: 320px; height: 420px;">
+        </div>
+        <div class="map-holder">
+          <picture>
+            <!-- <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x"> -->
+
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="420" alt="Санкт-Петербург, набережная реки Карповки, дом 5">
+          </picture>
+        </div>
+      </section>
   </main>
 
   <footer class="footer-container">
     <section class="about-us">
-      <h2 class="about-us__title visually-hidden">Мы в социальных сетях</h2>
-      <div class="about-us__cat-energy">
-        <a class="about-us__link" href="#">
-          <svg class="about-us__logo" aria-hidden="true" focusable="false" width="128" height="24"
-            xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#cat-icon"></use>
-          </svg>
-          <span class="visually-hidden">Интернет-магазин Кэт энерджи.</span>
-        </a>
-      </div>
-      <div class="about-us__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy">
-              <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
-                xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#vkontakte-icon"></use>
-              </svg>
-              <span class="visually-hidden">Вконтакте.</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
-                xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#youtube-icon"></use>
-              </svg>
-              <span class="visually-hidden">Ютуб.</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
-                xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#telegram-icon"></use>
-              </svg>
-              <span class="visually-hidden">Телеграм.</span>
-            </a>
-          </li>
-        </ul>
+      <h2 class="about-us__title visually-hidden">О нас</h2>
+      <div class="about-us-container">
+        <div class="about-us__social social">
+          <a class="social__logo" href="index.html">
+            <div class="social__logo-holder">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="social__logo-image" src="img/logo-mobile.svg" width="32" height="36"
+                  alt="Иконка логотипа Кэт энерджи.">
+              </picture>
+            </div>
+            <span class="social__logo-text">Интернет-магазин
+              кофейных напитков</span>
+          </a>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/htmlacademy">
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.40589 1.40589C0 2.81177 0 5.0745 0 9.6V10.4C0 14.9255 0 17.1882 1.40589 18.5941C2.81177 20 5.0745 20 9.6 20H10.4C14.9255 20 17.1882 20 18.5941 18.5941C20 17.1882 20 14.9255 20 10.4V9.6C20 5.0745 20 2.81177 18.5941 1.40589C17.1882 0 14.9255 0 10.4 0H9.6C5.0745 0 2.81177 0 1.40589 1.40589ZM3.37505 6.08337C3.48338 11.2834 6.08337 14.4084 10.6417 14.4084H10.9001V11.4334C12.5751 11.6 13.8417 12.825 14.35 14.4084H16.7167C16.0667 12.0417 14.3583 10.7334 13.2916 10.2334C14.3583 9.61671 15.8583 8.11671 16.2166 6.08337H14.0666C13.5999 7.73337 12.2168 9.23337 10.9001 9.37504V6.08337H8.75V11.85C7.41667 11.5167 5.73338 9.90004 5.65837 6.08337H3.37505Z" fill="#BDBDBD"/>
+                  </svg>
+
+                <!-- <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#vk-icon"></use>
+                </svg> -->
+                <span class="visually-hidden">Вконтакте.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="22" height="22"  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 8.96454e-05C4.92488 8.96454e-05 0 4.92497 0 11C0 15.6602 2.8994 19.644 6.99129 21.2467C6.89517 20.3764 6.80825 19.0379 7.02943 18.0878C7.22934 17.2293 8.31931 12.6201 8.31931 12.6201C8.31931 12.6201 7.99028 11.9612 7.99028 10.987C7.99028 9.45743 8.87682 8.31552 9.98068 8.31552C10.9192 8.31552 11.3724 9.0201 11.3724 9.86499C11.3724 10.8088 10.7716 12.2199 10.4615 13.5275C10.2023 14.6223 11.0105 15.5152 12.0904 15.5152C14.0454 15.5152 15.5483 13.4537 15.5483 10.4781C15.5483 7.84429 13.6558 6.00285 10.9535 6.00285C7.82365 6.00285 5.98653 8.35042 5.98653 10.7765C5.98653 11.7219 6.35073 12.7357 6.80518 13.2868C6.89508 13.3958 6.90824 13.4912 6.88146 13.6023C6.79797 13.9498 6.6124 14.6969 6.57597 14.8498C6.528 15.0512 6.41655 15.0939 6.20808 14.9969C4.83426 14.3574 3.9753 12.3488 3.9753 10.7355C3.9753 7.26559 6.49644 4.07891 11.2434 4.07891C15.0593 4.07891 18.0247 6.79806 18.0247 10.432C18.0247 14.223 15.6344 17.2739 12.3167 17.2739C11.202 17.2739 10.1542 16.6949 9.79547 16.0109C9.79547 16.0109 9.2439 18.1111 9.11018 18.6258C8.86186 19.5812 8.19145 20.7788 7.74303 21.5095C8.77223 21.8281 9.86598 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92497 17.0751 8.96454e-05 11 8.96454e-05Z" fill="#BDBDBD"/>
+                  </svg>
+
+                <!-- <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#pinterest-icon"></use>
+                </svg> -->
+                <span class="visually-hidden">Пинтерест.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4C3.33786e-06 2.812 3.35195e-06 5.074 3.35195e-06 9.6V10.4L1.66545e-06 10.5136C-9.77702e-05 14.97 -0.00014782 17.2117 1.4 18.6C2.812 20 5.074 20 9.6 20H10.4H10.5131C14.9698 20.0001 17.2117 20.0001 18.6 18.6C20 17.188 20 14.926 20 10.4V9.6V9.48685C20.0001 5.03015 20.0001 2.7883 18.6 1.4C17.188 3.33786e-06 14.926 3.35195e-06 10.4 3.35195e-06H9.6L9.48639 1.66545e-06C5.03 -9.77702e-05 2.78825 -0.00014782 1.4 1.4ZM10.0194 10.1972C11.6876 10.1972 13.0477 8.83717 13.0477 7.16889C13.0477 5.50061 11.6876 4.14061 10.0194 4.14061C8.33296 4.14061 6.97295 5.50061 6.97295 7.16889C6.97295 8.83717 8.33296 10.1972 10.0194 10.1972ZM10.0194 5.91768C10.7084 5.91768 11.2706 6.47982 11.2706 7.16889C11.2706 7.85796 10.7084 8.4201 10.0194 8.4201C9.3303 8.4201 8.76816 7.85796 8.76816 7.16889C8.75003 6.47982 9.31216 5.91768 10.0194 5.91768ZM11.2343 12.6815C11.8509 12.5364 12.4493 12.3007 12.9933 11.9561C13.4103 11.7023 13.5372 11.1401 13.2653 10.7231C13.0114 10.306 12.4493 10.1791 12.0322 10.4511C10.7991 11.2308 9.18524 11.2308 7.95216 10.4511C7.53509 10.1972 6.99109 10.306 6.71909 10.7231C6.48336 11.1401 6.61029 11.6841 7.02736 11.938C7.57137 12.2825 8.16977 12.5183 8.7863 12.6634L7.0999 14.3498C6.75536 14.6943 6.75536 15.2565 7.0999 15.601C7.28123 15.7823 7.49883 15.8548 7.73456 15.8548C7.9703 15.8548 8.1879 15.7641 8.36923 15.601L10.0375 13.9327L11.7058 15.601C12.0503 15.9455 12.6124 15.9455 12.957 15.601C13.3015 15.2565 13.3015 14.6943 12.957 14.3498L11.2343 12.6815Z" fill="#BDBDBD"/>
+                  </svg>
+
+                <!-- <svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#ok-icon"></use>
+                </svg> -->
+                <span class="visually-hidden">Одноклассники.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-us__info info">
+          <div class="info__group info__group--shop">
+            <h3 class="info__title">Интернет-магазин</h3>
+            <ul class="info__list">
+              <li class="info__item">
+                <a  class="info__link" href="#">Каталог</a>
+              </li>
+              <li class="info__item">
+                <a  class="info__link" href="#">Доставка</a>
+              </li>
+              <li class="info__item">
+                <a  class="info__link" href="#">Способы оплаты</a>
+              </li>
+              <li class="info__item">
+                <a  class="info__link" href="#">О нас</a>
+              </li>
+            </ul>
+          </div>
+          <div class="info__group info__group--media">
+            <h3 class="info__title">Медиа</h3>
+            <ul class="info__list">
+              <li class="info__item">
+                <a  class="info__link" href="#">Блог</a>
+              </li>
+              <li class="info__item">
+                <a  class="info__link" href="#">Информация для СМИ</a>
+              </li>
+              <li class="info__item">
+                <a  class="info__link" href="#">Правовая информация</a>
+              </li>
+            </ul>
+          </div>
+          <div class="info__group info__group--contacts">
+            <h3 class="info__title">Контакты</h3>
+            <p class="info__text">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+            <a class="info__link info__link--tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
+          </div>
+        </div>
       </div>
       <div class="about-us__academy academy">
         <a class="academy__link academy__link--text" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="academy__title">HTML Academy</span>
+          <span class="academy__title">Разработано в HTML Academy</span>
         </a>
         <a class="academy__link academy__link--logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="academy__logo" aria-hidden="true" focusable="false" width="27" height="34"
+          <svg class="social__icon" aria-hidden="true" focusable="false" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.2151 5.75392L5.97184 2.49957V2.49875L5.97121 2.49916L5.97058 2.49875V2.49957L0.784854 5.75013V1.40658L6.00008 0.830884L11.2151 1.40658V5.75392ZM11.211 6.32987L9.12557 7.62344L5.98451 5.65607L5.97935 6.22863L8.66414 7.9096L8.20107 8.19683L5.98451 6.80853L5.97935 7.3811L7.72892 8.47648L7.31607 8.76717L7.30606 8.77351L5.98451 7.95383L5.97935 8.52631L6.8465 9.06404L5.96315 9.62244L0.796198 6.3886L5.97058 3.1139V3.11448L11.211 6.32987ZM11.2151 11.7713L6 15.0384L0.784854 11.7713V7.02542L5.97763 10.2796L5.98631 10.8693L2.42396 8.63702L2.41871 9.20959L5.99523 11.4728L6.00407 12.0782L2.42873 9.83883L2.42356 10.4113L6 12.6745L9.60624 10.4026V7.95712L11.2151 6.94552V11.7713ZM5.99984 -3.17891e-07L0 0.662267V12.2411L6 16L12 12.2411V0.662267L5.99984 -3.17891e-07Z" fill="#BDBDBD"/>
+          </svg>
+          <!-- <svg class="academy__logo" aria-hidden="true" focusable="false" width="27" height="34"
             xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#academy-icon"></use>
-          </svg>
+          </svg> -->
         </a>
       </div>
     </section>
   </footer>
+  <script src="vendor/leaflet/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>

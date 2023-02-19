@@ -1,0 +1,66 @@
+.info__title {
+  color: @primary;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.info__group {
+  padding: 20px;
+  border-bottom: 1px solid @secondary;
+}
+
+.info__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.info__item {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.info__link {
+  text-decoration: none;
+  color: @black;
+  &--tel {
+    position: relative;
+    padding-left: 20px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 13px;
+      height: 16px;
+      background-image: url(../img/tel-icon-contacts.svg);
+      background-repeat: no-repeat;
+      background-size: 13px 16px;
+      top: 6%;
+      left:0;
+
+    }
+  }
+}
+
+.info__text {
+  margin: 0;
+  margin-bottom: 16px;
+  position: relative;
+  padding-left: 20px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 16px;
+    background-image: url(../img/mark-icon-contacts.svg);
+    background-repeat: no-repeat;
+    background-size: 13px 16px;
+    top: 6%;
+    left:0;
+  }
+}

@@ -77,3 +77,153 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .features {
+    padding: 60px 20px 100px;
+
+  }
+
+  .features__title {
+    .tablet-h2title-style ();
+    margin-bottom: 60px;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
+
+  .features__item {
+    min-height: 94px;
+    padding-left: 72px;
+    padding-top: 0px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .features__name {
+    .tablet-h3title-style ();
+    padding: 0;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: left;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -67px;
+      width: 52px;
+      height: 56px;
+      display: block;
+    }
+
+    &--speed {
+      &::before {
+        background-image: url("../img/features-clock-icon.svg");
+        background-size: 52px 56px;
+      }
+    }
+    &--comfort {
+      &::before {
+        background-image: url("../img/features-pocket-icon.svg");
+        background-size: 52px 56px;
+      }
+    }
+    &--energy {
+      &::before {
+        background-image: url("../img/features-lightning-icon.svg");
+        background-size: 52px 56px;
+      }
+    }
+    &--eco {
+      &::before {
+        background-image: url("../img/features-leaf-icon.svg");
+        background-size: 52px 56px;
+      }
+    }
+  }
+
+  .features__description{
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (min-width: @desktop-width) {
+  .features {
+    padding: 100px 40px 120px;
+
+  }
+
+  .features__title {
+    .tablet-h2title-style ();
+    margin-bottom: 80px;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    padding-right: 0;
+  }
+
+  .features__item {
+    min-height: 170px;
+    padding-left: 0;
+    padding-top: 76px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .features__name {
+    .tablet-h3title-style ();
+    padding: 0;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -73px;
+      left: 136px;
+      width: 52px;
+      height: 56px;
+      display: block;
+    }
+
+    &--speed {
+      &::before {
+        background-image: url("../img/features-clock-icon.svg");
+        background-size: 52px 56px;
+      }
+    }
+    &--comfort {
+      &::before {
+        background-image: url("../img/features-pocket-icon.svg");
+        background-size: 52px 56px;
+      }
+    }
+    &--energy {
+      &::before {
+        background-image: url("../img/features-lightning-icon.svg");
+        background-size: 52px 56px;
+      }
+    }
+    &--eco {
+      &::before {
+        background-image: url("../img/features-leaf-icon.svg");
+        background-size: 52px 56px;
+      }
+    }
+  }
+
+  .features__description{
+    margin: 0;
+    padding: 0;
+  }
+}

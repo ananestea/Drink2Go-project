@@ -11,7 +11,7 @@
 
 .user__link {
   display: block;
-  padding: 22px;
+  padding: 20px 22px;
   position: relative;
   color: @black;
   text-decoration: none;
@@ -21,3 +21,30 @@
   fill: @black
 }
 
+.user__text {
+  display:none;
+}
+
+@media (min-width: @tablet-width) {
+  .user {
+    order:1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user__text {
+    display: block;
+  }
+
+  .user__list {
+    width:261px;
+  }
+
+  .user__link {
+    display: flex;
+  }
+
+  .user__icon {
+    margin-right: 8px;
+  }
+}
