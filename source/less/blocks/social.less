@@ -33,5 +33,41 @@
 }
 
 .social__logo {
-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    padding: 40px 20px 32px;
+    display: flex;
+    border-bottom: none;
+  }
+
+  .social__logo {
+    width: 170px;
+  }
+
+  .social__logo img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: @desktop-width) {
+  .social {
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-start;
+    align-self: start;
+  }
+
+  .social__logo-text {
+    display: block;
+    width: 318px;
+  }
+
+  .social__logo {
+    margin-bottom: 30px;
+  }
+
 }

@@ -1,6 +1,27 @@
+.card-catalog {
+  padding-bottom: 40px;
+}
 .card-catalog__list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  padding-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .card-catalog {
+    padding-bottom: 90px;
+  }
+  .card-catalog__list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card-catalog__list {
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+  }
 }

@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
 }
+.pagination__text {
+  display: none;
+}
 
 .pagination__link {
   display: block;
@@ -55,6 +58,51 @@
   }
 
   &--prev{
+    &:hover {
+      &::after{
+        content:"";
+        border: solid @white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(135deg);
+      }
+
+    }
+
+    &:focus {
+      &::after{
+        content:"";
+        border: solid @white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(135deg);
+      }
+    }
+
+    &:active {
+      &::after{
+        content:"";
+        border: solid @white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(135deg);
+      }
+    }
+
+    &:disabled {
+      &::after{
+        content:"";
+        border: solid @white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(135deg);
+      }
+    }
+
     &::after {
       content:"";
       border: solid @primary;
@@ -63,50 +111,54 @@
       padding: 3px;
       transform: rotate(135deg);
     }
+  }
 
+  &--next {
     &:hover {
       &::after{
+        content:"";
         border: solid @white;
         border-width: 0 2px 2px 0;
         display: inline-block;
         padding: 3px;
-        transform: rotate(135deg);
+        transform: rotate(-45deg);
       }
 
     }
 
     &:focus {
       &::after{
+        content:"";
         border: solid @white;
         border-width: 0 2px 2px 0;
         display: inline-block;
         padding: 3px;
-        transform: rotate(135deg);
+        transform: rotate(-45deg);
       }
     }
 
     &:active {
       &::after{
+        content:"";
         border: solid @white;
         border-width: 0 2px 2px 0;
         display: inline-block;
         padding: 3px;
-        transform: rotate(135deg);
+        transform: rotate(-45deg);
       }
     }
 
     &:disabled {
       &::after{
+        content:"";
         border: solid @white;
         border-width: 0 2px 2px 0;
         display: inline-block;
         padding: 3px;
-        transform: rotate(135deg);
+        transform: rotate(-45deg);
       }
     }
-  }
 
-  &--next {
     &::after {
       content:"";
       border: solid @primary;
@@ -115,52 +167,92 @@
       padding: 3px;
       transform: rotate(-45deg);
     }
-
-    &:hover {
-      &::after{
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-      }
-
-    }
-
-    &:focus {
-      &::after{
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-      }
-    }
-
-    &:active {
-      &::after{
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-      }
-    }
-
-    &:disabled {
-      &::after{
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-      }
-    }
   }
 
   &--current {
     font-weight: 600;
     background-color: transparent;
     color: @black;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .pagination {
+    margin-left: auto;
+    width: 395px;
+  }
+
+  .pagination__text {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .pagination__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--prev{
+      min-width: 104px;
+
+      &:hover {
+        &::after{
+          display: none;
+        }
+
+      }
+
+      &:focus {
+        &::after{
+          display: none;
+        }
+      }
+
+      &:active {
+        &::after{
+          display: none;
+        }
+      }
+
+      &:disabled {
+        &::after{
+          display: none;
+        }
+      }
+      &::after {
+        display: none;
+      }
+    }
+
+    &--next {
+      min-width: 104px;
+      &:hover {
+        &::after{
+          display: none;
+        }
+
+      }
+
+      &:focus {
+        &::after{
+          display: none;
+        }
+      }
+
+      &:active {
+        &::after{
+          display: none;
+        }
+      }
+
+      &:disabled {
+        &::after{
+          display: none;
+        }
+      }
+      &::after {
+        display: none;
+      }
+    }
   }
 }

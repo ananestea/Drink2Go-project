@@ -25,7 +25,7 @@
   line-height: 24px;
   width: 160px;
   border: none;
-  padding: 10px 14px;
+  padding: 10px 7px;
 }
 
 .form__button-submit {
@@ -35,4 +35,41 @@
 .form__button-reset {
   color: @primary;
   background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .form__field-group-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  .form__button-container {
+    margin: 0 auto;
+    width: 320px;
+    display: flex;
+  }
+
+  .form__button-submit {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .form__field-group {
+    &--value {
+      width: 220px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__field-group-wrapper {
+    display: block;
+  }
+
+  .form__button-container {
+    margin-left: 0;
+    padding: 0;
+    width: 320px;
+    display: flex;
+  }
 }

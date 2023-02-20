@@ -37,7 +37,7 @@
       content: "";
       width: 13px;
       height: 16px;
-      background-image: url(../img/tel-icon-contacts.svg);
+      background-image: url(../../img/tel-icon-contacts.svg);
       background-repeat: no-repeat;
       background-size: 13px 16px;
       top: 6%;
@@ -57,10 +57,43 @@
     content: "";
     width: 13px;
     height: 16px;
-    background-image: url(../img/mark-icon-contacts.svg);
+    background-image: url(../../img/mark-icon-contacts.svg);
     background-repeat: no-repeat;
     background-size: 13px 16px;
     top: 6%;
     left:0;
   }
+}
+
+
+@media (min-width: @tablet-width) {
+  .info {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 0 20px 0 20px;
+  }
+
+  .info__group {
+    padding: 0px;
+    border-bottom: none;
+    width: 222px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .info__group {
+    padding: 0px;
+    border-bottom: none;
+    width: 317px;
+  }
+
 }

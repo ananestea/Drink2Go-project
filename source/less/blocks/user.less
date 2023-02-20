@@ -25,13 +25,26 @@
   display:none;
 }
 
+.user {
+  padding-right: 60px;
+}
+
 @media (min-width: @tablet-width) {
   .user {
-    order:1;
+    padding: 0;
+    margin-left: 517px;
+  }
+
+  .user__link {
+    padding: 32px 22px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .user {
+    padding: 0;
+    margin-left: 783px;
+  }
   .user__text {
     display: block;
   }

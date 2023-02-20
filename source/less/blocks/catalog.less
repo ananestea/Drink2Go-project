@@ -18,3 +18,30 @@
   .mobile-h2title-style ();
   margin-bottom: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    padding: 80px 20px 90px;
+  }
+
+  .catalog__title{
+    .tablet-h2title-style ();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    padding: 100px 40px 120px;
+  }
+
+  .catalog__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+  }
+
+  .catalog__title{
+    margin-bottom: 40px;
+  }
+}
+
