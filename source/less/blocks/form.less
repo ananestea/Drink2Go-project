@@ -11,12 +11,13 @@
 .form__field-group-wrapper {
   margin-bottom: 11px;
 }
+
 .form__field-group-container {
   margin-bottom: 24px;
 }
 
 .form__button-container {
-  padding: 0 60px ;
+  padding: 0 60px;
 }
 
 .form__button {
@@ -35,15 +36,32 @@
 .form__button-reset {
   color: @primary;
   background-color: @white;
+
+  &:hover {
+    color: @white;
+  }
+
+  &:focus {
+    color: @white;
+  }
+
+  &:active {
+    color: @white;
+  }
+
+  &:disabled {
+    color: @white;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .form__field-group-wrapper {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 40px;
   }
+
   .form__button-container {
     margin: 0 auto;
     width: 320px;
@@ -54,6 +72,7 @@
     margin-bottom: 0;
     margin-right: 30px;
   }
+
   .form__field-group {
     &--value {
       width: 220px;

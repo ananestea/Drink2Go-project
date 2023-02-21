@@ -8,13 +8,14 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  background-color:@bg-bege;
+  background-color: @bg-bege;
 
   &--lavander {
-    background-color:@bg-lavander;
+    background-color: @bg-lavander;
   }
+
   &--espresso {
-    background-color:@bg-espresso;
+    background-color: @bg-espresso;
   }
 }
 
@@ -33,15 +34,11 @@
 
 .swiper-pagination .swiper-pagination-bullet {
   display: none;
-  width: 20px;
-  border-radius: 0;
-  height: 2px;
-  background-color: @primary;
 }
-
 
 .swiper-button {
   --swiper-navigation-size: 20px;
+
   &::after {
     color: @primary;
   }
@@ -80,20 +77,22 @@
   align-items: center;
   grid-template-columns: 1fr 113px;
 }
-.swiper__order-price{
+
+.swiper__order-price {
   display: flex;
   justify-content: space-between;
   margin-right: 20px;
 }
 
 .swiper__order-price-old {
-  color:@primary;
+  color: @primary;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   margin: 0;
   padding: 0;
 }
+
 .swiper__order-price-new {
   font-weight: 600;
   font-size: 20px;
@@ -124,11 +123,19 @@
     background-image: linear-gradient(@bg-bege 68%, @white 68%);
     display: flex;
     flex-direction: column;
+
+    &--lavander {
+      background-image: linear-gradient(@bg-lavander 68%, @white 68%);
+    }
+
+    &--espresso {
+      background-image: linear-gradient(@bg-espresso 68%, @white 68%);
+    }
   }
+
   .swiper__image-box {
     padding: 0;
     padding-bottom: 0;
-    margin-bottom: 0;
     width: 476px;
     height: 476px;
     margin: 0 auto;
@@ -181,13 +188,13 @@
     text-align: left;
     box-sizing: border-box;
   }
+
   .swiper__image-box {
     position: absolute;
-    top:30px;
+    top: 30px;
     left: 90px;
     padding: 0;
     padding-bottom: 0;
-    margin-bottom: 0;
     width: 600px;
     height: 600px;
     margin: 0 auto;
@@ -196,14 +203,13 @@
 
   .swiper__info {
     margin: 0;
-    margin-bottom:  4px;
+    margin-bottom: 4px;
   }
 
   .swiper__title {
     .tablet-title-style ();
     width: 625px;
     display: block;
-    margin-bottom: 16px;
     text-align: left;
     margin: 0;
     margin-bottom: 16px;
@@ -214,8 +220,7 @@
     line-height: 32px;
     width: 625px;
     display: block;
-    text-align: center;
-    margin: 0 ;
+    margin: 0;
     margin-bottom: 40px;
     text-align: left;
   }
@@ -231,8 +236,8 @@
   .swiper .swiper-pagination {
     display: flex;
     align-items: center;
-    left:40%;
-    bottom:70px;
+    left: 40%;
+    bottom: 70px;
   }
 
   .swiper-pagination .swiper-pagination-bullet {
@@ -240,6 +245,18 @@
     width: 62px;
     border-radius: 0;
     height: 4px;
-    background-color: @primary;
+    background-color: @white;
+
+    &:hover {
+      background-color: @primary-opacity;
+    }
+
+    &:focus {
+      background-color: @primary-opacity;
+    }
+
+    &:active {
+      background-color: @primary;
+    }
   }
 }

@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
 }
+
 .pagination__text {
   display: none;
 }
@@ -31,7 +32,7 @@
   }
 
   &:disabled {
-    color:@white;
+    color: @white;
     background-color: @grey-light;
   }
 }
@@ -40,71 +41,9 @@
   color: @primary;
   background-color: @white;
 
-  &:hover {
-    color: @white;
-  }
-
-  &:focus-within {
-    color: @white;
-  }
-
-  &:active {
-    color: @white;
-  }
-
-  &:disabled {
-    color:@white;
-    background-color: @grey-light;
-  }
-
-  &--prev{
-    &:hover {
-      &::after{
-        content:"";
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(135deg);
-      }
-
-    }
-
-    &:focus {
-      &::after{
-        content:"";
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(135deg);
-      }
-    }
-
-    &:active {
-      &::after{
-        content:"";
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(135deg);
-      }
-    }
-
-    &:disabled {
-      &::after{
-        content:"";
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(135deg);
-      }
-    }
-
+  &--prev {
     &::after {
-      content:"";
+      content: "";
       border: solid @primary;
       border-width: 0 2px 2px 0;
       display: inline-block;
@@ -114,53 +53,8 @@
   }
 
   &--next {
-    &:hover {
-      &::after{
-        content:"";
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-      }
-
-    }
-
-    &:focus {
-      &::after{
-        content:"";
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-      }
-    }
-
-    &:active {
-      &::after{
-        content:"";
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-      }
-    }
-
-    &:disabled {
-      &::after{
-        content:"";
-        border: solid @white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(-45deg);
-      }
-    }
-
     &::after {
-      content:"";
+      content: "";
       border: solid @primary;
       border-width: 0 2px 2px 0;
       display: inline-block;
@@ -173,6 +67,43 @@
     font-weight: 600;
     background-color: transparent;
     color: @black;
+  }
+
+  &:hover {
+    color: @white;
+
+    &::after {
+      border: solid @white;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  &:focus-within {
+    color: @white;
+
+    &::after {
+      border: solid @white;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  &:active {
+    color: @white;
+
+    &::after {
+      border: solid @white;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  &:disabled {
+    color: @white;
+    background-color: @grey-light;
+
+    &::after {
+      border: solid @white;
+      border-width: 0 2px 2px 0;
+    }
   }
 }
 
@@ -192,67 +123,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    &--prev{
+
+    &::after {
+      display: none;
+    }
+
+    &--prev {
       min-width: 104px;
-
-      &:hover {
-        &::after{
-          display: none;
-        }
-
-      }
-
-      &:focus {
-        &::after{
-          display: none;
-        }
-      }
-
-      &:active {
-        &::after{
-          display: none;
-        }
-      }
-
-      &:disabled {
-        &::after{
-          display: none;
-        }
-      }
-      &::after {
-        display: none;
-      }
     }
 
     &--next {
       min-width: 104px;
-      &:hover {
-        &::after{
-          display: none;
-        }
-
-      }
-
-      &:focus {
-        &::after{
-          display: none;
-        }
-      }
-
-      &:active {
-        &::after{
-          display: none;
-        }
-      }
-
-      &:disabled {
-        &::after{
-          display: none;
-        }
-      }
-      &::after {
-        display: none;
-      }
     }
   }
 }

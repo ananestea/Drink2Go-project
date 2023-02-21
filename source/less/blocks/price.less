@@ -3,7 +3,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  padding: 0;
   width: 118px;
   min-height: 38px;
   background-color: @white;
@@ -14,22 +13,28 @@
   appearance: textfield;
   text-align: center;
   padding: 0 10px;
+
   &::placeholder {
-    color:@grey;
+    color: @grey;
   }
 
   &:focus {
     border: 2px solid @primary-darker;
     outline: none;
   }
+
   &:disabled {
-    border: 2px solid @bg-light;
+    border: 2px solid @grey-light;
+    background-color: transparent;
+    color: @grey;
   }
 }
-.price__label-wrapper{
+
+.price__label-wrapper {
   display: flex;
   justify-content: space-between;
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
@@ -38,9 +43,7 @@
     background-color: @grey;
     top: 70%;
     left: 50%;
-    transform: translateY(50%);
-    transform: translateX(-50%);
-
+    transform: translateY(50%), translateX(-50%);
   }
 }
 

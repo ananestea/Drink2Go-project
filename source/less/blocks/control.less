@@ -1,253 +1,152 @@
-// .control {
-//   position: relative;
-//   display: block;
-//   padding-left: 34px;
-//   &--country {
-//     padding-left: 54px;
-//   }
-
-//   &:hover {
-//     .control__mark {
-//       border-color: #bababa;
-//     }
-//   }
 .control {
   position: relative;
   display: block;
   padding-left: 34px;
+
   &--country {
     padding-left: 54px;
   }
-
-  &:hover {
-    .control__input[type="radio"] + .control__mark {
-      border-color: @primary-lighter;
-      &::after {
-        background-color: @primary-opacity;
-      }
-    }
-    .control__input[type="checkbox"] + .control__mark {
-      border-color:@primary;
-      background-color: @primary-opacity;
-      &::after {
-        background-color: @white;
-      }
-    }
-  }
-
-  &:focus-within {
-    .control__input[type="radio"] + .control__mark {
-      border-color: @primary-lighter;
-      &::after {
-        background-color: @primary-opacity;
-      }
-    }
-    .control__input[type="checkbox"] + .control__mark {
-      border-color:@primary;
-      background-color: @primary-opacity;
-      &::after {
-        background-color: @white;
-      }
-    }
-  }
 }
 
+//   &:hover {
+//     .control__input[type="radio"] + .control__mark {
+//       border-color: @primary-lighter;
 
-.control__input {
-  &:disabled ~ .control__mark {
-    color: @grey-light;
-    background-color: transparent;
-    border: 2px solid @grey-light;
-    &::after {
-      background-color: @grey-light;
-    }
-  }
-  &:disabled ~ span {
-    color: @grey-light;
-  }
-}
+//       &::after {
+//         background-color: @primary-opacity;
+//       }
+//     }
+//     .control__input[type="checkbox"] + .control__mark {
+//       border-color:@primary;
+//       background-color: @primary-opacity;
 
-.control__mark {
-  position: absolute;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  background-color: @white;
-  border: 2px solid @grey;
-  box-sizing: border-box;
-}
+//       &::after {
+//         background-color: @white;
+//       }
+//     }
+//   }
 
-.control__input[type="radio"] + .control__mark {
-  border-radius: 50%;
-}
+//   &:focus-within {
+//     .control__input[type="radio"] + .control__mark {
+//       border-color: @primary-lighter;
 
-.control__input[type="checkbox"] + .control__mark {
-  width: 42px;
-  height: 24px;
-  border-radius: 12px;
-  border: 2px solid transparent;
-  background-color: @grey;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    margin: auto;
-    display: block;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: @white;
-  }
-}
+//       &::after {
+//         background-color: @primary-opacity;
+//       }
+//     }
+//     .control__input[type="checkbox"] + .control__mark {
+//       border-color:@primary;
+//       background-color: @primary-opacity;
 
-.control__input[type="checkbox"] {
-  &:checked + .control__mark {
-    background-color: @primary;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 18px
-    }
-  }
-  &:disabled + .control__mark {
-    background-color:@grey-light;
-    &::after {
-      background-color: @bg-light;
-    }
-  }
-  &:checked {
-    &:disabled + .control__mark {
-      background-color:@grey-light;
-      &::after {
-        background-color: @grey;
-      }
-    }
-  }
-}
+//       &::after {
+//         background-color: @white;
+//       }
+//     }
+//   }
+// }
 
 
-.control__input[type="radio"] {
-  &:checked + .control__mark {
-    border: 2px solid @primary;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      transform: translateY(3%);
-      margin: auto;
-      display: block;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background-color: @primary;
-    }
-  }
-}
+// .control__input {
+//   &:disabled ~ .control__mark {
+//     color: @grey-light;
+//     background-color: transparent;
+//     border: 2px solid @grey-light;
+
+//     &::after {
+//       background-color: @grey-light;
+//     }
+//   }
+//   &:disabled ~ span {
+//     color: @grey-light;
+//   }
+// }
+
+// .control__mark {
+//   position: absolute;
+//   left: 0;
+//   width: 24px;
+//   height: 24px;
+//   background-color: @white;
+//   border: 2px solid @grey;
+//   box-sizing: border-box;
+// }
+
+// .control__input[type="radio"] + .control__mark {
+//   border-radius: 50%;
+// }
+
+// .control__input[type="checkbox"] + .control__mark {
+//   width: 42px;
+//   height: 24px;
+//   border-radius: 12px;
+//   border: 2px solid transparent;
+//   background-color: @grey;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
+//     margin: auto;
+//     display: block;
+//     border-radius: 50%;
+//     width: 20px;
+//     height: 20px;
+//     background-color: @white;
+//   }
+// }
+
+// .control__input[type="checkbox"] {
+//   &:checked + .control__mark {
+//     background-color: @primary;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       top: 0px;
+//       left: 18px
+//     }
+//   }
+//   &:disabled + .control__mark {
+//     background-color:@grey-light;
+
+//     &::after {
+//       background-color: @bg-light;
+//     }
+//   }
+
+//   &:checked {
+//     &:disabled + .control__mark {
+//       background-color:@grey-light;
+
+//       &::after {
+//         background-color: @grey;
+//       }
+//     }
+//   }
+// }
+
+// .control__input[type="radio"] {
+//   &:checked + .control__mark {
+//     border: 2px solid @primary;
+
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       top: 3px;
+//       left: 3px;
+//       transform: translateY(3%);
+//       margin: auto;
+//       display: block;
+//       width: 14px;
+//       height: 14px;
+//       border-radius: 50%;
+//       background-color: @primary;
+//     }
+//   }
+// }
 
 .control__label {
   display: block;
   font-size: 16px;
   line-height: 24px;
 }
-
-
-
-
-// .control {
-//   &:hover {
-//     .control__input[type="radio"] + .control__mark {
-//       border-color: @primary-lighter;
-//       &::after {
-//         background-color: @primary-opacity;
-//       }
-//     }
-//   }
-// }
-
-  // .control {
-  //   &:hover {
-  //     .control__input[type="radio"] .control__mark {
-  //       border-color: @primary-lighter;
-  //       &::after {
-  //         background-color: @primary-opacity;
-  //       }
-  //     }
-  //   } .control__input[type="radio"] {
-  //     .control__mark {
-  //       border-color: @primary-lighter;
-  //       &::after {
-  //         background-color: @primary-opacity;
-  //       }
-  //     }
-  //   }
-  // }
-
-
-
-// .control__input {
-//   &:disabled ~ span {
-//     color: @grey-light;
-//   }
-//   &:disabled ~ .control__mark {
-//     border: 2px solid @grey-light;
-//     background-color: transparent;
-//   }
-// }
-
-
-// @media (min-width: @tablet-width) {
-//   .control {
-//     padding-left: 60px;
-//   }
-
-//   .control__label {
-//     padding-top: 5px;
-//     padding-bottom: 5px;
-//     font-size: 20px;
-//     line-height: 30px;
-//   }
-
-//   .control__mark {
-//     width: 40px;
-//     height: 40px;
-//   }
-
-//   .control__input[type="checkbox"] {
-//     &:checked + .control__mark {
-//       &::after {
-//         content: "";
-//         position: absolute;
-//         top: 5px;
-//         left: 7px;
-//         margin: auto;
-//         display: block;
-//         width: 23px;
-//         height: 14px;
-//         border: 2px solid @green-main;
-//         border-top-style: none;
-//         border-right-style: none;
-//         transform: rotate(-45deg);
-//       }
-//     }
-//   }
-
-//   .control__input[type="radio"] {
-//     &:checked + .control__mark {
-//       &::after {
-//         content: "";
-//         position: absolute;
-//         top: 10px;
-//         left: 10px;
-//         margin: auto;
-//         display: block;
-//         width: 18px;
-//         height: 18px;
-//         border-radius: 50%;
-//         background-color: @green-main;
-//       }
-//     }
-//   }
-// }

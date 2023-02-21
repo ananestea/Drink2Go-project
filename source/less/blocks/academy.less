@@ -11,15 +11,40 @@
   color: @grey;
   font-size: 12px;
   line-height: 16px;
-  &--logo {
-    padding-top: 3px;
+  display: flex;
+
+  &:hover {
+    color: @primary;
+  }
+
+  &:focus {
+    color: @primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+
+  &:hover .academy__icon {
+    fill: @primary;
+  }
+
+  &:focus .academy__icon {
+    fill: @primary;
+  }
+
+  &:active .academy__icon {
+    fill: @primary-darker;
   }
 }
 
+.academy__title {
+  margin-right: 3px;
+}
 
 @media (min-width: @tablet-width) {
   .academy {
-    justify-content:center;
+    justify-content: center;
     padding: 30px 20px 40px;
   }
 }
