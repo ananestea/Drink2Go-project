@@ -41,9 +41,8 @@
     width: 9px;
     height: 2px;
     background-color: @grey;
-    top: 70%;
-    left: 50%;
-    transform: translateY(50%), translateX(-50%);
+    top: 73%;
+    left: 48%;
   }
 }
 
@@ -54,5 +53,15 @@
 @media (min-width: @tablet-width) {
   .price__value {
     width: 92px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__value {
+    width: 131px;
+
+    &--max {
+      margin-right: 11px;
+    }
   }
 }

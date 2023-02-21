@@ -17,9 +17,9 @@
   flex-wrap: wrap;
 }
 
-// .social__icon {
-//   fill: @grey;
-// }
+.social__icon {
+  fill: @grey;
+}
 
 .social__link {
   padding: 9px;
@@ -39,15 +39,15 @@
 
   &:active {
     background-color: @primary-opacity;
-    color: @primary;
+    fill: @primary;
   }
 
   &:hover .social__icon {
-    color: inherit;
+    fill: @primary;
   }
 
   &:focus .social__icon {
-    color: inherit;
+    fill: @primary;
   }
 }
 
@@ -101,6 +101,10 @@
   }
 
   .social__logo {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+  }
+
+  .social__logo-holder {
+    margin-bottom: 9px;
   }
 }

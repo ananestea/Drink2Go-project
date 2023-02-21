@@ -27,13 +27,13 @@
   z-index: 2;
 
   &--min {
-    top: -9px;
-    left: -5px;
+    top: -12px;
+    left: 0;
   }
 
   &--max {
-    top: -9px;
-    right: -10px;
+    top: -12px;
+    right: -18px;
   }
 
   &:hover {
@@ -62,5 +62,18 @@
 @media (min-width: @tablet-width) {
   .range__bar {
     width: 190px;
+  }
+
+  .range__toggle {
+    &--max {
+      top: -12px;
+      right: -11px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range__bar {
+    width: 283px;
   }
 }

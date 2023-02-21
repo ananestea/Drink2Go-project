@@ -3,6 +3,10 @@
   height: 656px;
 }
 
+.swiper-br {
+  display: none;
+}
+
 .swiper-wrapper .swiper-slide {
   text-align: center;
   font-weight: 400;
@@ -38,11 +42,55 @@
 
 .swiper-button {
   --swiper-navigation-size: 20px;
+  padding-top: 317px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 317px;
+  top: 11px;
+
+  &:hover {
+    background: linear-gradient(90deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:focus {
+    background: linear-gradient(90deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    &::after {
+      color: @grey;
+    }
+  }
 
   &::after {
     color: @primary;
   }
 }
+
+.swiper-button-next {
+  right: 0;
+
+  &:hover {
+    background: linear-gradient(270deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:focus {
+    background: linear-gradient(270deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
 
 .swiper__info {
   color: @primary;
@@ -116,20 +164,24 @@
     height: 828px;
   }
 
+  .swiper-br {
+    display: block;
+  }
+
   .swiper-wrapper .swiper-slide {
     font-size: 20px;
     line-height: 32px;
-    padding-top: 60px;
-    background-image: linear-gradient(@bg-bege 68%, @white 68%);
+    padding-top: 57px;
+    background-image: linear-gradient(@bg-bege 72%, @white 72%);
     display: flex;
     flex-direction: column;
 
     &--lavander {
-      background-image: linear-gradient(@bg-lavander 68%, @white 68%);
+      background-image: linear-gradient(@bg-lavander 72%, @white 72%);
     }
 
     &--espresso {
-      background-image: linear-gradient(@bg-espresso 68%, @white 68%);
+      background-image: linear-gradient(@bg-espresso 72%, @white 72%);
     }
   }
 
@@ -167,6 +219,51 @@
     grid-template-columns: 1fr 113px;
     margin-bottom: 20px;
   }
+
+  .swiper-button {
+    --swiper-navigation-size: 20px;
+    padding-top: 308px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 308px;
+    top: 11px;
+
+    &:hover {
+      background: linear-gradient(90deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:focus {
+      background: linear-gradient(90deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+
+    &:disabled {
+      &::after {
+        color: @grey;
+      }
+    }
+
+    &::after {
+      color: @primary;
+    }
+  }
+
+  .swiper-button-next {
+    &:hover {
+      background: linear-gradient(270deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:focus {
+      background: linear-gradient(270deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -189,10 +286,55 @@
     box-sizing: border-box;
   }
 
+  .swiper-button {
+    --swiper-navigation-size: 20px;
+    padding-top: 346px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 346px;
+    top: 11px;
+
+    &:hover {
+      background: linear-gradient(90deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:focus {
+      background: linear-gradient(90deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+
+    &:disabled {
+      &::after {
+        color: @grey;
+      }
+    }
+
+    &::after {
+      color: @primary;
+    }
+  }
+
+  .swiper-button-next {
+    &:hover {
+      background: linear-gradient(270deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:focus {
+      background: linear-gradient(270deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
   .swiper__image-box {
     position: absolute;
     top: 30px;
-    left: 90px;
+    left: 104px;
     padding: 0;
     padding-bottom: 0;
     width: 600px;
@@ -236,7 +378,7 @@
   .swiper .swiper-pagination {
     display: flex;
     align-items: center;
-    left: 40%;
+    left: 43%;
     bottom: 70px;
   }
 
@@ -246,6 +388,7 @@
     border-radius: 0;
     height: 4px;
     background-color: @white;
+    opacity: 1;
 
     &:hover {
       background-color: @primary-opacity;
@@ -258,5 +401,9 @@
     &:active {
       background-color: @primary;
     }
+  }
+
+  .swiper__pagination span[aria-current="true"] {
+    background-color: @primary;
   }
 }

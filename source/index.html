@@ -13,10 +13,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="leaflet/leaflet.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preload" href="fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserratmedium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserratsemibold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserratregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratsemibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -41,7 +41,7 @@
           <ul class="user__list">
             <li class="user__item">
               <a class="user__link " href="#">
-                <svg class ="user__icon"  aria-hidden="true" focusable="false" width="16" height="16">
+                <svg class ="user__icon"  aria-hidden="true" focusable="false" width="16" height="16"  viewBox="0 0 16 16">
                   <use xlink:href="img/icons/stack.svg#user"></use>
                 </svg>
                 <span class="user__text">Войти</span>
@@ -49,7 +49,7 @@
             </li>
             <li class="user__item">
               <a class="user__link " href="#">
-                <svg class ="user__icon"  aria-hidden="true" focusable="false" width="16" height="16">
+                <svg class ="user__icon"  aria-hidden="true" focusable="false" width="16" height="16"  viewBox="0 0 16 16">
                   <use xlink:href="img/icons/stack.svg#basket"></use>
                 </svg>
                 <span class="user__text">Корзина</span>
@@ -105,7 +105,7 @@
           </div>
           <p class="swiper__info">Новинка!</p>
           <h2 class="swiper__title">Декаф Флэт Уайт</h2>
-          <p class="swiper__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+          <p class="swiper__description">Свежесваренный кофе без кофеина из Эфиопии<br class="swiper-br"> с натуральным фермерским молоком — то, что нужно<br class="swiper-br"> для расслабления после тяжёлого рабочего дня</p>
           <div class="swiper__order">
             <div class="swiper__order-price">
               <p class="swiper__order-price-old"><del>295₽</del></p>
@@ -185,7 +185,7 @@
 
         <li class="features__item features__item--comfort">
           <h3 class="features__name features__name--comfort">Удобство</h3>
-          <p class="features__description">Легко помещается и в карман,
+          <p class="features__description">Легко помещается и в карман,<br>
             и в маленькую сумочку</p>
         </li>
 
@@ -196,7 +196,7 @@
 
         <li class="features__item features__item--eco">
           <h3 class="features__name features__name--eco">Экологичность</h3>
-          <p class="features__description">Вся упаковка сделана
+          <p class="features__description">Вся упаковка сделана<br>
             из перерабатываемых материалов</p>
         </li>
       </ul>
@@ -209,12 +209,12 @@
         <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form__field-group-wrapper">
             <fieldset class="form__field-group form__field-group--value">
-              <legend class="form__group-title">Цена</legend>
+              <legend class="form__group-title form__group-title--value">Цена</legend>
               <div class="form__field-group-container">
                 <div class="form__field-wrapper">
                   <div class="form__price price">
                     <div class="price__range range">
-                      <div class="range__bar" style="left: 0;">
+                      <div class="range__bar">
                         <button class="range__toggle range__toggle--min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
@@ -236,7 +236,7 @@
               </div>
             </fieldset>
             <fieldset class="form__field-group form__field-group--milk">
-              <legend class="form__group-title">Наличие молока</legend>
+              <legend class="form__group-title form__group-title--milk">Наличие молока</legend>
               <div class="form__field-group-container">
                 <div class="form__field-wrapper">
                   <div class="form__filter filter filter--milk">
@@ -277,7 +277,7 @@
               </div>
             </fieldset>
             <fieldset class="form__field-group form__field-group--country">
-              <legend class="form__group-title">Страна произрастания</legend>
+              <legend class="form__group-title form__group-title--country">Страна произрастания</legend>
               <div class="form__field-group-container">
                 <div class="form__filter filter filter--country">
                   <ul class="filter__list filter__list--country">
@@ -362,7 +362,7 @@
                   <a class="card__link card__link--title" href="#">
                     <b class="card__title">Декаф Флэт Уайт</b>
                   </a>
-                  <p class="card__description">Кофе без кофеина из Эфиопии
+                  <p class="card__description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                   <div class="card__container">
                     <p class="card__price">225₽</p>
@@ -393,7 +393,7 @@
                   <a class="card__link card__link--title" href="#">
                     <b class="card__title">Декаф Флэт Уайт</b>
                   </a>
-                  <p class="card__description">Кофе без кофеина из Эфиопии
+                  <p class="card__description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                   <div class="card__container">
                     <p class="card__price">225₽</p>
@@ -424,7 +424,7 @@
                   <a class="card__link card__link--title" href="#">
                     <b class="card__title">Декаф Флэт Уайт</b>
                   </a>
-                  <p class="card__description">Кофе без кофеина из Эфиопии
+                  <p class="card__description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                   <div class="card__container">
                     <p class="card__price">225₽</p>
@@ -455,7 +455,7 @@
                   <a class="card__link card__link--title" href="#">
                     <b class="card__title">Декаф Флэт Уайт</b>
                   </a>
-                  <p class="card__description">Кофе без кофеина из Эфиопии
+                  <p class="card__description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                   <div class="card__container">
                     <p class="card__price">225₽</p>
@@ -486,7 +486,7 @@
                   <a class="card__link card__link--title" href="#">
                     <b class="card__title">Декаф Флэт Уайт</b>
                   </a>
-                  <p class="card__description">Кофе без кофеина из Эфиопии
+                  <p class="card__description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                   <div class="card__container">
                     <p class="card__price">225₽</p>
@@ -517,7 +517,7 @@
                   <a class="card__link card__link--title" href="#">
                     <b class="card__title">Декаф Флэт Уайт</b>
                   </a>
-                  <p class="card__description">Кофе без кофеина из Эфиопии
+                  <p class="card__description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                   <div class="card__container">
                     <p class="card__price">225₽</p>
@@ -582,7 +582,7 @@
               <picture>
                 <source media="(min-width: 768px)" srcset="img/logo-tablet-footer.svg">
                 <img class="social__logo-image" src="img/logo-tablet.svg" width="32" height="36"
-                  alt="Иконка логотипа Кэт энерджи.">
+                  alt="Иконка логотипа Drink2Go.">
               </picture>
             </div>
             <span class="social__logo-text">Интернет-магазин
@@ -592,24 +592,24 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="https://vk.com/htmlacademy">
-                <svg class="social__icon" fill="currentColor" aria-hidden="true" focusable="false" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/icons/stack.svg#vk-icon"></use>
+                <svg class="social__icon" fill="currentColor" aria-hidden="true" focusable="false" width="20" height="20"  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="./img/icons/stack.svg#vk-icon"></use>
                 </svg>
                 <span class="visually-hidden">Вконтакте.</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__icon" fill="currentColor" aria-hidden="true" focusable="false" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/icons/stack.svg#pinterest-icon"></use>
+                <svg class="social__icon" fill="currentColor" aria-hidden="true" focusable="false" width="22" height="22"   viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="./img/icons/stack.svg#pinterest-icon"></use>
                 </svg>
                 <span class="visually-hidden">Пинтерест.</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <svg class="social__icon" fill="currentColor" aria-hidden="true" focusable="false" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/icons/stack.svg#ok-icon"></use>
+                <svg class="social__icon" fill="currentColor" aria-hidden="true" focusable="false" width="20" height="20"  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="./img/icons/stack.svg#ok-icon"></use>
                 </svg>
                 <span class="visually-hidden">Одноклассники.</span>
               </a>
@@ -659,16 +659,16 @@
       <div class="about-us__academy academy">
         <a class="academy__link academy__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="academy__title">Разработано в HTML Academy</span>
-          <svg class="academy__icon" aria-hidden="true" focusable="false" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icons/stack.svg#academy-icon"></use>
+          <svg class="academy__icon" aria-hidden="true" focusable="false" width="12" height="16"  viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="./img/icons/stack.svg#academy-icon"></use>
           </svg>
         </a>
       </div>
     </section>
   </footer>
-  <script src="../leaflet/leaflet.js" type="text/javascript"></script>
+  <script src="../leaflet/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="../js/script.js" ></script>
+  <script src="../js/script.js" type="module" ></script>
 </body>
 
 </html>

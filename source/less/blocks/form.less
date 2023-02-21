@@ -8,12 +8,28 @@
   border: 0;
 }
 
+.form__group-title {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 22px;
+  font-weight: 600;
+  padding: 0;
+
+  &--value {
+    margin-bottom: 35px;
+  }
+
+  &--country {
+    margin-bottom: 19px;
+  }
+}
+
 .form__field-group-wrapper {
   margin-bottom: 11px;
 }
 
 .form__field-group-container {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 .form__button-container {
@@ -36,6 +52,8 @@
 .form__button-reset {
   color: @primary;
   background-color: @white;
+  font-size: 14px;
+  line-height: 24px;
 
   &:hover {
     color: @white;
@@ -55,32 +73,80 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form {
+    margin-bottom: 40px;
+  }
+
+  .form__group-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 22px;
+    font-weight: 600;
+    padding: 0;
+
+    &--value {
+      margin-bottom: 31px;
+    }
+
+    &--country {
+      margin-bottom: 19px;
+    }
+  }
+
+  .form__field-group-container {
+    margin-bottom: 0;
+  }
+
   .form__field-group-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+  }
+
+  .form__field-wrapper {
+    margin-right: -6px;
   }
 
   .form__button-container {
     margin: 0 auto;
     width: 320px;
     display: flex;
+    margin-right: 167px;
   }
 
   .form__button-submit {
     margin-bottom: 0;
     margin-right: 30px;
+    padding: 8px 3px;
+  }
+
+  .form__button-reset {
+    padding: 8px 5px;
   }
 
   .form__field-group {
     &--value {
       width: 220px;
+      margin-left: 3px;
+    }
+
+    &--milk {
+      margin-left: -11px;
+    }
+
+    &--country {
+      margin-left: -11px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form {
+    width: 318px;
+    padding-top: 5px;
+  }
+
   .form__field-group-wrapper {
     display: block;
   }
@@ -90,5 +156,22 @@
     padding: 0;
     width: 320px;
     display: flex;
+  }
+
+  .form__field-group {
+    &--value {
+      width: 100%;
+      margin-left: 3px;
+      margin-bottom: 30px;
+    }
+
+    &--milk {
+      margin-left: 0;
+      margin-bottom: 25px;
+    }
+
+    &--country {
+      margin-left: 0;
+    }
   }
 }
